@@ -85,7 +85,7 @@ public class Bank {
     */
   public void withdraw(double amount) {
     //verify that withdrawal amount is less than or equal to balance
-    if (balance - amount <= 0){
+    if (balance - amount < 0){
       System.out.println("Insufficient funds, You are only allowed to withdraw $" + balance);
     } else {
       this.balance -= amount;
