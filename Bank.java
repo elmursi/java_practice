@@ -7,6 +7,17 @@ public class Bank {
   private String email;
   private String phoneNumber;
 
+
+  //constructor
+  public Bank(int number, double balance, String name, String email, String phone){
+    this.accountNumber = number;
+    this.balance = balance;
+    this.customerName = name;
+    this.email = email;
+    this.phoneNumber = phone;
+  }
+
+
   //getters and setters
   public int getAccountNumber() {
     return accountNumber;
@@ -60,6 +71,7 @@ public class Bank {
     */
   public void deposit(double amount) {
     this.balance += amount;
+    System.out.println("You've deposited $" + amount + " into your account. Your new balance is $" + this.balance);
   }
 
   /*
@@ -67,7 +79,14 @@ public class Bank {
     * @param amount the amount of money to withdraw
     */
   public void withdraw(double amount) {
-    this.balance -= amount;
+    //verify that withdrawal amount is less than or equal to balance
+    if (balance - amount <= 0){
+      System.out.println("Insufficient funds, You are only allowed to withdraw $" + balance);
+    } else {
+      this.balance -= amount;
+      System.out.println("Withdrawal successful of $" + amount + " Your new balance is $" + balance);
+    }
+  
   }
 
   /*
