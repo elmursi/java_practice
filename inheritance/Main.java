@@ -11,6 +11,15 @@ class Main{
     dog dog = new dog("dog",1,1,1,1,1,1,"white");
     
     dog.eat();
+    dog.walk();
+    dog.run();
+
+
+    //fish
+    Fish fish = new Fish("fish",1,1,1,1,1,1,1);
+    fish.eat();
+    fish.swim(10);
+    
 
 }
 
