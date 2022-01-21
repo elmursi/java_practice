@@ -17,6 +17,11 @@ public class Bank {
     this.phoneNumber = phone;
   }
 
+  //default constructor
+  public Bank(){
+    this(0, 0, "", "", "");
+  }
+
 
   //getters and setters
   public int getAccountNumber() {
